@@ -58,7 +58,7 @@ function PANEL:shouldHide()
 end
 
 function PANEL:Refresh()
-    for _,v in pairs(self.Items) do
+    for _, v in pairs(self.Items) do
         if v.Refresh then v:Refresh() end
     end
     self:InvalidateLayout()

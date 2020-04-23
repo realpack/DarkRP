@@ -268,7 +268,7 @@ local function BuyVehicle(ply, args)
     end
 
     if not found then
-        for k,v in pairs(CustomVehicles) do
+        for k, v in pairs(CustomVehicles) do
             if string.lower(v.name) == string.lower(args) then found = CustomVehicles[k] break end
         end
     end

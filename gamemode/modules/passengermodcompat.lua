@@ -37,11 +37,10 @@ local function onUnlocked(ent)
 
     -- VUMod
     if ent:IsVehicle() and ent.VehicleTable and ent.VehicleTable.Passengers then
-        for _ ,v in pairs(ent.VehicleTable.Passengers) do
+        for _, v in pairs(ent.VehicleTable.Passengers) do
             v.Ent:Fire("unlock", "", 0)
         end
     end
-
 
     -- Unlocks the vehicle if you're unlocking a passenger seat:
     if IsValid(ent:GetParent()) and ent:GetParent():IsVehicle() then

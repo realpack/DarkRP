@@ -280,7 +280,7 @@ function SWEP:Succeed()
         if next(stripped) ~= nil then ent.ConfiscatedWeapons = stripped end
     else
         -- Merge stripped weapons into confiscated weapons
-        for k,v in pairs(stripped) do
+        for k, v in pairs(stripped) do
             if ent.ConfiscatedWeapons[k] then continue end
 
             ent.ConfiscatedWeapons[k] = v

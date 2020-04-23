@@ -162,7 +162,7 @@ function PANEL:Paint(w, h)
 end
 
 function PANEL:onSelected(item)
-    for _,v in pairs(self.iconList.Items) do
+    for _, v in pairs(self.iconList.Items) do
         if v == item then continue end
         v:SetSelected(false)
         v.model:SetSize(60, 60)
@@ -206,7 +206,7 @@ function PANEL:Init()
 end
 
 function PANEL:Refresh()
-    for _,v in pairs(self.Items) do
+    for _, v in pairs(self.Items) do
         if v.Refresh then v:Refresh() end
     end
     self:InvalidateLayout()

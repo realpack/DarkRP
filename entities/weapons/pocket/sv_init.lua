@@ -170,7 +170,7 @@ local function getDTVars(ent)
 
     local res = {}
 
-    for k,v in pairs(value) do
+    for k, v in pairs(value) do
         res[k] = v.GetFunc(ent, v.index)
     end
 

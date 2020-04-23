@@ -16,7 +16,7 @@ function SWEP:DrawHUD()
     draw.WordBox(2, 10, ScrH() / 2 + 40, DarkRP.getPhrase("keypad_checker_click_to_clear"), "UiBold", Color(0,0,0,120), Color(255, 255, 255, 255))
 
     local entMessages = {}
-    for k,v in pairs(DrawData or {}) do
+    for _, v in pairs(DrawData or {}) do
         if not IsValid(v.ent) or not IsValid(v.original) then continue end
         entMessages[v.ent] = (entMessages[v.ent] or 0) + 1
         local pos = v.ent:LocalToWorld(v.ent:OBBCenter()):ToScreen()
@@ -34,7 +34,7 @@ end
 
 KeypadCheckerHalos = function()
     local drawEnts = {}
-    for k,v in pairs(DrawData) do
+    for _, v in pairs(DrawData) do
         if not IsValid(v.ent) then continue end
 
         table.insert(drawEnts, v.ent)
